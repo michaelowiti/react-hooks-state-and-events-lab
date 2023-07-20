@@ -8,7 +8,7 @@ function Item({ name, category }) {
     setIsInCart((isInCart)=>!isInCart)
   }
   return (
-    <li className="">
+    <li className={isInCart ?  "in-cart" :""}>
       <span>{name}</span>
       <span className="category">{category}</span>
       <button onClick={handleClickItem} className={isInCart ? "remove" : "add"}>{isInCart ? "Remove from" :"Add to"} Cart</button>
